@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.first_section{
+    background-image: url("images/bg-pattern-desktop.svg");
+    /* background-repeat: no-repeat; */
+    opacity: 0.8;
+    padding: 70px 180px;
+}
+
+.heading{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-top: 4em;
+    letter-spacing: 15px;
+    color: black;
+}
+
+.red_heading{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.text{
+    color:hsl(0, 36%, 70%);
+    margin-top: 30px;
+    line-height: 24px;
+    padding-right: 11em;
+}
+
+.email_input{
+    margin: 30px 0;
+}
+
+input{
+    padding: 14px 20px;
+    border-radius: 25px;
+    border: 1px solid hsl(0, 36%, 70%);
+    color: black;
+    width: 29em;
+}
+
+::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+.button{
+    padding: 11px 35px;
+    border-radius: 25px;
+    padding-bottom: 13px;
+    border: none;
+    background-image:linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 93%, 68%));
+    margin-left: -55px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 hsl(0, 80%, 86%), 0 2px 5px 0 hsl(0, 80%, 86%);
+    font-size: 15px;
+    /* transition: 3s; */
+}
+
+.button:hover{
+    background-image:linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+    color:white;
+}
+
+.error-image{
+    margin-left: -85px;
+    display: none;
+}
+
+
+.error-text{
+    position: absolute;
+    color: red;
+    padding: 10px 2px;
+    display:none;
+}
+
+.invalid {
+    border:1px solid red;
+} 
+
+.second_section{
+    width: vw;
+    height: vh;
+}
+
+@media screen and (max-width:520px) {
+    .container{
+        flex-direction: row-reverse;
+    }
+
+    .second_section{
+        width: 10%;
+        height: 10%;
+    }
+
+    .first_section{
+        opacity: 0.6;
+        padding: 40px 90px;
+    }
+
+    input{
+        padding: 14px 10px;
+        width: 26em;
+    }
+}
